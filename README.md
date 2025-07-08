@@ -80,7 +80,8 @@ https://images/confusion_matrix.png
 Training Progress:
 https://images/training_curves.png
 
-file:///var/folders/mh/zyvgrgvd7hxg_1ds_4_3qklc0000gn/T/TemporaryItems/NSIRD_screencaptureui_pwj4Ik/Screenshot%202025-07-08%20at%2010.15.23%E2%80%AFPM.png
+
+<img width="977" alt="Screenshot 2025-07-08 at 10 17 13 PM" src="https://github.com/user-attachments/assets/d130598c-16ae-493a-96cb-55718d5a5d76" />
 
 
 
