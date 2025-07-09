@@ -7,9 +7,7 @@ This project implements a transfer learning approach to classify maize leaf dise
 - Common rust
 - Gray leaf spot
 - Northern leaf blight
-
 The system achieves **~95% accuracy** using a fine-tuned VGG16 model with class-weighted loss handling.
-
 
 
 ## ✨ Key Features
@@ -19,8 +17,7 @@ The system achieves **~95% accuracy** using a fine-tuned VGG16 model with class-
 - **Class Imbalance Handling**: Computed class weights for loss function
 - **Model Evaluation**: Comprehensive metrics including confusion matrix and classification report
 - **GPU Acceleration**: Automatic CUDA detection and utilization
-
-
+- 
 
 **Statistics:**
 - Total images: ~3,000
@@ -71,8 +68,6 @@ northern_leaf_blight  0.96      0.97      0.96       207
   weighted avg       0.96      0.96      0.96       800
 
 
-
-
   📈 Visualizations
 Confusion Matrix:
 https://images/confusion_matrix.png
@@ -82,6 +77,50 @@ https://images/training_curves.png
 
 
 <img width="977" alt="Screenshot 2025-07-08 at 10 17 13 PM" src="https://github.com/user-attachments/assets/d130598c-16ae-493a-96cb-55718d5a5d76" />
+
+
+
+
+
+
+
+
+WITH SELF-ATTENTION:->
+
+This project implements a deep learning solution for classifying maize (corn) leaf diseases using a modified VGG16 architecture with self-attention. The model achieved excellent performance, with 95% accuracy on the test set.
+
+
+Model Architecture:->
+
+The system uses a VGG16 backbone with several key modifications:
+Self-Attention Mechanism: Added after the last convolutional layer to help the model focus on relevant disease patterns
+Transfer Learning: Pretrained on ImageNet with frozen feature extractor layers
+Custom Classifier: Modified fully connected layers with dropout for regularization
+
+
+Training Process
+
+Training Duration: 17 epochs (early stopping triggered)
+Optimizer: Adam with learning rate 0.001
+Learning Rate Scheduling: ReduceLROnPlateau with patience=2
+Early Stopping: Patience=5 epochs
+Data Augmentation: Random rotations, flips, color jitter, and Gaussian blur
+
+
+Key Observations
+
+The model performs exceptionally well on healthy leaves and common rust detection
+Blight detection achieves good balance between precision and recall
+No significant overfitting despite high training accuracy (validation metrics remain strong)
+
+
+
+Technical Highlights
+Implemented self-attention mechanism to improve feature selection
+Used class weighting to handle potential imbalances
+Employed comprehensive data augmentation to improve generalization
+Achieved 94.5% validation accuracy with early stopping
+
 
 
 
